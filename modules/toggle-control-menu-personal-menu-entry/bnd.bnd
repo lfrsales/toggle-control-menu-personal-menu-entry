@@ -1,0 +1,3 @@
+Bundle-Name: toggle-control-menu-personal-menu-entry
+Bundle-SymbolicName: com.liferay.users.admin.web.internal.product.navigation.personal.menu
+Bundle-Version: 1.0.0
