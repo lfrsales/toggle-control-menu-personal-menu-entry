@@ -34,11 +34,14 @@ public class ToggleControlMenuPersonalMenuEntry implements PersonalMenuEntry {
 	public String getPortletURL(HttpServletRequest httpServletRequest)
 		throws PortalException {
 		
-		boolean showControlMenu = GetterUtil.getBoolean(SessionClicks.get(httpServletRequest, "SHOW_CONTROL_MENU", "default"));
+		boolean showControlMenu = GetterUtil.getBoolean(
+			SessionClicks.get(
+				httpServletRequest, "SHOW_CONTROL_MENU", "default"));
 
 		String showControlMenuNext = showControlMenu ? "false" : "true";
 
-		return "javascript: Liferay.Store('SHOW_CONTROL_MENU', '" + showControlMenuNext + "'); location.reload();";
+		return "javascript: Liferay.Store('SHOW_CONTROL_MENU', '" +
+			showControlMenuNext + "'); setTimeout(() => location.reload(), 0);";
 	}
 
 }
