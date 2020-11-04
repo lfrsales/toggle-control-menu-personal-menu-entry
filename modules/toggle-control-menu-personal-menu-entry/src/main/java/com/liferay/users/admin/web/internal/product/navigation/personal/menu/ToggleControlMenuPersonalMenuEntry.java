@@ -40,8 +40,7 @@ public class ToggleControlMenuPersonalMenuEntry implements PersonalMenuEntry {
 
 		String showControlMenuNext = showControlMenu ? "false" : "true";
 
-		return "javascript: Liferay.Store('SHOW_CONTROL_MENU', '" +
-			showControlMenuNext + "'); setTimeout(() => location.reload(), 0);";
+		return "javascript: toggleControlMenu(" + showControlMenuNext + ");";
 	}
 
 }
